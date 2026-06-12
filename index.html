@@ -11,7 +11,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,6 +19,7 @@
     <nav class="nav container">
       <a href="#top" class="nav-logo">PD<span class="accent">.</span></a>
       <ul class="nav-links">
+        <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#publications">Publications</a></li>
@@ -62,9 +63,43 @@
       </ul>
     </section>
 
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2 class="section-title reveal"><span class="section-index">01.</span> About Me</h2>
+      <div class="about-grid">
+        <!-- EDIT ME: replace the placeholder paragraphs below with your own words. -->
+        <div class="about-text reveal">
+          <p>
+            Hello! I'm Pedro, a software engineer from Portugal. My path started at the University
+            of Aveiro, where I completed both my BSc and MSc in Software Engineering, with an
+            Erasmus semester at the University of Padova along the way.
+          </p>
+          <p>
+            During my master's I worked as a research fellow on serverless security, building an
+            eBPF-based system call tracing pipeline that became FADO — an anomaly detection system
+            for serverless functions published at IEEE NOMS 2026.
+          </p>
+          <p>
+            These days I work at Critical Software in Lisbon on cloud and backend systems for the
+            automotive industry. Outside of work, I enjoy exploring new technologies and finding
+            better ways to build software.
+          </p>
+        </div>
+        <aside class="about-facts card reveal">
+          <h3>Quick facts</h3>
+          <ul class="entry-points">
+            <li>Based in Lisbon, Portugal</li>
+            <li>MSc. Software Engineering, University of Aveiro</li>
+            <li>Published researcher (IEEE NOMS 2026)</li>
+            <li>Fluent in Portuguese, English and Spanish</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
     <!-- Experience -->
     <section id="experience" class="section container">
-      <h2 class="section-title reveal"><span class="section-index">01.</span> Experience</h2>
+      <h2 class="section-title reveal"><span class="section-index">02.</span> Experience</h2>
       <div class="timeline">
         <article class="timeline-item reveal">
           <div class="timeline-marker"></div>
@@ -143,7 +178,7 @@
 
     <!-- Education -->
     <section id="education" class="section container">
-      <h2 class="section-title reveal"><span class="section-index">02.</span> Education</h2>
+      <h2 class="section-title reveal"><span class="section-index">03.</span> Education</h2>
       <div class="edu-grid">
         <article class="card reveal">
           <h3>MSc. Software Engineering</h3>
@@ -164,7 +199,7 @@
 
     <!-- Publications -->
     <section id="publications" class="section container">
-      <h2 class="section-title reveal"><span class="section-index">03.</span> Publications</h2>
+      <h2 class="section-title reveal"><span class="section-index">04.</span> Publications</h2>
       <article class="card publication reveal">
         <p class="pub-venue">IEEE Network Operations and Management Symposium (IEEE NOMS) · 2026</p>
         <h3>FADO: Detecting Anomalies in Serverless Functions via eBPF System Call Tracing</h3>
@@ -175,7 +210,7 @@
 
     <!-- Skills -->
     <section id="skills" class="section container">
-      <h2 class="section-title reveal"><span class="section-index">04.</span> Technologies &amp; Skills</h2>
+      <h2 class="section-title reveal"><span class="section-index">05.</span> Technologies &amp; Skills</h2>
       <div class="skills-grid">
         <div class="card reveal">
           <h3>Programming Languages</h3>
@@ -204,7 +239,7 @@
         <div class="card reveal">
           <h3>Languages</h3>
           <ul class="tag-list">
-            <li>Portuguese</li><li>English</li><li>Spanish</li>
+            <li>Portuguese · Fluent</li><li>English · Fluent</li><li>Spanish · Fluent</li>
           </ul>
         </div>
       </div>
@@ -212,7 +247,7 @@
 
     <!-- Contact -->
     <section id="contact" class="section container contact">
-      <h2 class="section-title reveal"><span class="section-index">05.</span> Get in Touch</h2>
+      <h2 class="section-title reveal"><span class="section-index">06.</span> Get in Touch</h2>
       <p class="contact-blurb reveal">
         I'm always open to talking about cloud engineering, serverless security, or interesting
         backend problems. The fastest way to reach me is by email.
