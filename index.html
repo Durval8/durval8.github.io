@@ -23,6 +23,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -35,32 +36,40 @@
 
   <main id="top">
     <!-- Hero -->
-    <section class="hero container">
-      <p class="hero-kicker reveal">Hi, my name is</p>
-      <h1 class="hero-name reveal">Pedro Durval<span class="accent">.</span></h1>
-      <h2 class="hero-tagline reveal">I build cloud &amp; backend systems.</h2>
-      <p class="hero-blurb reveal">
-        I'm a Software Engineer based in Lisbon, Portugal, currently working at
-        <a href="https://www.criticalsoftware.com" target="_blank" rel="noopener">Critical Software</a>,
-        where I maintain and expand the API bridging BMW's internal product data with seller-facing
-        applications across all markets. My background spans cloud computing, DevOps, and security
-        research on serverless environments — including a published anomaly-detection system built
-        on eBPF system call tracing.
-      </p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
-        <a class="btn btn-ghost" href="#experience">See my work</a>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-kicker reveal">Hi, my name is</p>
+          <h1 class="hero-name reveal">Pedro Durval<span class="accent">.</span></h1>
+          <h2 class="hero-tagline reveal">I build cloud &amp; backend systems.</h2>
+          <p class="hero-blurb reveal">
+            I'm a Software Engineer based in Lisbon, Portugal, currently working at
+            <a href="https://www.criticalsoftware.com" target="_blank" rel="noopener">Critical Software</a>,
+            where I maintain and expand the API bridging BMW's internal product data with seller-facing
+            applications across all markets. My background spans cloud computing, DevOps, and security
+            research on serverless environments — including a published anomaly-detection system built
+            on eBPF system call tracing.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="#experience">See my work</a>
+          </div>
+          <ul class="hero-meta reveal">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lisbon, Portugal
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:pedrocruzeiro@ua.pt">pedrocruzeiro@ua.pt</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-portrait reveal">
+          <img src="assets/profile.jpg" alt="Portrait of Pedro Durval" />
+        </div>
       </div>
-      <ul class="hero-meta reveal">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Lisbon, Portugal
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <a href="mailto:pedrocruzeiro@ua.pt">pedrocruzeiro@ua.pt</a>
-        </li>
-      </ul>
     </section>
 
     <!-- About -->
@@ -122,55 +131,64 @@
 
         <article class="timeline-item reveal">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card">
-            <header class="entry-header">
-              <h3>Research Fellow <span class="entry-org">· University of Aveiro</span></h3>
-              <p class="entry-meta">Aveiro &nbsp;·&nbsp; Apr 2025 – Jan 2026</p>
-            </header>
-            <ul class="entry-points">
-              <li>Developed a complete end-to-end pipeline to train syscall-based anomaly detection ML models for serverless environments.</li>
-              <li>Built an eBPF-based system call interception system to support data acquisition on low-level function behavior.</li>
-              <li>Created a dataset of function behavior supported by an in-depth analysis of the vulnerabilities associated with cloud environments.</li>
-            </ul>
-            <ul class="tag-list">
-              <li>eBPF</li><li>Machine Learning</li><li>Serverless</li><li>Security</li>
-            </ul>
+          <div class="timeline-frame">
+            <img class="timeline-image" src="assets/universidade_de_aveiro.jpg" alt="Pedro at the University of Aveiro DETI department" />
+            <div class="timeline-content card">
+              <header class="entry-header">
+                <h3>Research Fellow <span class="entry-org">· University of Aveiro</span></h3>
+                <p class="entry-meta">Aveiro &nbsp;·&nbsp; Apr 2025 – Jan 2026</p>
+              </header>
+              <ul class="entry-points">
+                <li>Developed a complete end-to-end pipeline to train syscall-based anomaly detection ML models for serverless environments.</li>
+                <li>Built an eBPF-based system call interception system to support data acquisition on low-level function behavior.</li>
+                <li>Created a dataset of function behavior supported by an in-depth analysis of the vulnerabilities associated with cloud environments.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>eBPF</li><li>Machine Learning</li><li>Serverless</li><li>Security</li>
+              </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item reveal">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card">
-            <header class="entry-header">
-              <h3>Apprentice Backend Developer <span class="entry-org">· Sky Portugal</span></h3>
-              <p class="entry-meta">Aveiro &nbsp;·&nbsp; Jul 2024 – Aug 2024</p>
-            </header>
-            <ul class="entry-points">
-              <li>Boosted inter-team cooperation by automating technical tasks for product team needs.</li>
-              <li>Developed code for Peacock's large-scale environment with thousands of active daily users.</li>
-              <li>Designed and documented the complete project lifecycle following agile methodology.</li>
-            </ul>
-            <ul class="tag-list">
-              <li>Backend</li><li>Automation</li><li>Agile</li>
-            </ul>
+          <div class="timeline-frame">
+            <img class="timeline-image" src="assets/sky.jpg" alt="Sky Portugal internship team activity" />
+            <div class="timeline-content card">
+              <header class="entry-header">
+                <h3>Apprentice Backend Developer <span class="entry-org">· Sky Portugal</span></h3>
+                <p class="entry-meta">Aveiro &nbsp;·&nbsp; Jul 2024 – Aug 2024</p>
+              </header>
+              <ul class="entry-points">
+                <li>Boosted inter-team cooperation by automating technical tasks for product team needs.</li>
+                <li>Developed code for Peacock's large-scale environment with thousands of active daily users.</li>
+                <li>Designed and documented the complete project lifecycle following agile methodology.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>Backend</li><li>Automation</li><li>Agile</li>
+              </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item reveal">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card">
-            <header class="entry-header">
-              <h3>QA &amp; Test Automation Summer Intern <span class="entry-org">· adidas</span></h3>
-              <p class="entry-meta">Porto &nbsp;·&nbsp; Jul 2023 – Aug 2023</p>
-            </header>
-            <ul class="entry-points">
-              <li>Used AWS to integrate a new data analysis module within the existing cloud infrastructure.</li>
-              <li>Explored different containerization approaches for module deployment.</li>
-              <li>Created data-centric views into the value provided by the test automation team.</li>
-            </ul>
-            <ul class="tag-list">
-              <li>AWS</li><li>Containers</li><li>Test Automation</li>
-            </ul>
+          <div class="timeline-frame">
+            <img class="timeline-image" src="assets/adidas.jpg" alt="adidas internship team photo" />
+            <div class="timeline-content card">
+              <header class="entry-header">
+                <h3>QA &amp; Test Automation Summer Intern <span class="entry-org">· adidas</span></h3>
+                <p class="entry-meta">Porto &nbsp;·&nbsp; Jul 2023 – Aug 2023</p>
+              </header>
+              <ul class="entry-points">
+                <li>Used AWS to integrate a new data analysis module within the existing cloud infrastructure.</li>
+                <li>Explored different containerization approaches for module deployment.</li>
+                <li>Created data-centric views into the value provided by the test automation team.</li>
+              </ul>
+              <ul class="tag-list">
+                <li>AWS</li><li>Containers</li><li>Test Automation</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
@@ -208,9 +226,39 @@
       </article>
     </section>
 
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2 class="section-title reveal"><span class="section-index">05.</span> Projects</h2>
+      <div class="projects-list">
+        <article class="reveal">
+          <div class="timeline-frame">
+            <img class="timeline-image" src="assets/proj.png" alt="WorldBuilding project preview" />
+            <div class="timeline-content card">
+              <header class="entry-header">
+                <h3>WorldBuilding <span class="entry-org">· Build worlds from faces</span></h3>
+                <p class="entry-meta">2026 &nbsp;·&nbsp; In Progress</p>
+              </header>
+              <ul class="entry-points">
+                <li>Containerized AI app turning character portraits into backstories via a local LLM.</li>
+                <li>Passion project to self-improve knowledge of production-grade backend tools (Kafka, PostgreSQL/Flyway and ELK observability).</li>
+                <li>Supported by a full unit and integration test-suite.</li>
+                <li>Built end-to-end through agentic coding workflows.</li>
+              </ul>
+              <p class="entry-note">
+                <a href="https://github.com/Durval8/worldbuilding" target="_blank" rel="noopener">github.com/Durval8/worldbuilding</a>
+              </p>
+              <ul class="tag-list">
+                <li>Local LLM</li><li>Kafka</li><li>PostgreSQL</li><li>Flyway</li><li>ELK</li><li>Docker</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Skills -->
     <section id="skills" class="section container">
-      <h2 class="section-title reveal"><span class="section-index">05.</span> Technologies &amp; Skills</h2>
+      <h2 class="section-title reveal"><span class="section-index">06.</span> Technologies &amp; Skills</h2>
       <div class="skills-grid">
         <div class="card reveal">
           <h3>Programming Languages</h3>
@@ -247,7 +295,7 @@
 
     <!-- Contact -->
     <section id="contact" class="section container contact">
-      <h2 class="section-title reveal"><span class="section-index">06.</span> Get in Touch</h2>
+      <h2 class="section-title reveal"><span class="section-index">07.</span> Get in Touch</h2>
       <p class="contact-blurb reveal">
         I'm always open to talking about cloud engineering, serverless security, or interesting
         backend problems. The fastest way to reach me is by email.
