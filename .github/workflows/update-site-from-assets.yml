@@ -1,0 +1,72 @@
+name: Update site from assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure no assets were added, deleted, or renamed
+        run: |
+          BEFORE="${{ github.event.before }}"
+          ZERO="0000000000000000000000000000000000000000"
+
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "$ZERO" ]; then
+            echo "No previous commit to diff against (e.g. new branch or manual run) — skipping check."
+            exit 0
+          fi
+
+          CHANGES="$(git diff --name-status "$BEFORE" "${{ github.sha }}" -- assets/)"
+          echo "$CHANGES"
+
+          if echo "$CHANGES" | grep -qE '^(A|D|R)'; then
+            echo "::error::Detected an added, deleted, or renamed file under assets/. Only modifying existing files (same filename) is allowed, since filenames are hardcoded throughout index.html/styles.css."
+            exit 1
+          fi
+
+  update-website:
+    needs: validate-assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            An update was just pushed to the assets/ folder of this static personal
+            website (index.html, styles.css, script.js — no build step).
+
+            assets/Durval_Polonia_CV.pdf drives the biographical content in
+            index.html: the About, Experience, Education, Publications, and Skills
+            sections. The other files in assets/ (profile.jpg, header.jpg, sky.jpg,
+            adidas.jpg, universidade_de_aveiro.jpg, proj1.png) are images referenced
+            by filename.
+
+            Your task:
+            1. Read assets/Durval_Polonia_CV.pdf and compare its content (roles,
+               dates, education, publications, skills, projects, contact info)
+               against what index.html currently says.
+            2. If they differ, update index.html's text to accurately reflect the
+               CV, preserving the existing HTML structure, classes, and styling
+               conventions. Only touch the sections that actually need to change.
+            3. If an image file changed, just sanity-check that nearby alt text or
+               captions still make sense — don't rewrite unrelated content.
+            4. Never add, delete, or rename any file in assets/ — every filename is
+               hardcoded elsewhere in the site.
+            5. If nothing actually needs to change, make no commit at all.
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools Read,Edit
