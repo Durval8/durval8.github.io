@@ -44,7 +44,12 @@ jobs:
                captions still make sense — don't rewrite unrelated content.
             4. Never add, delete, or rename any file in assets/ — every filename is
                hardcoded elsewhere in the site.
-            5. If nothing actually needs to change, make no commit at all.
+            5. If nothing actually needs to change, commit nothing and make no
+               git commands at all.
+            6. If you do make changes, stage and commit them yourself with git
+               (a clear, descriptive commit message) — do not push; the
+               workflow handles pushing.
           claude_args: |
             --model claude-sonnet-5
-            --allowedTools Read,Edit
+            --allowedTools Read,Edit,Bash(git:*)
+            --disallowedTools Bash(git push:*)
