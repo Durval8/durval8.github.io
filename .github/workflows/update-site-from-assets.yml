@@ -37,20 +37,39 @@ jobs:
             adidas.jpg, universidade_de_aveiro.jpg, proj1.png) are images referenced
             by filename.
 
+            The CV is the single source of truth. index.html must end up as a
+            complete, accurate mirror of it — no more, no less. Treat this as a
+            reconciliation, not a patch: it's just as important to remove things
+            from index.html that are no longer in the CV as it is to add things
+            that are new.
+
             Your task:
-            1. Read assets/Durval_Polonia_CV.pdf and compare its content (roles,
-               dates, education, publications, skills, projects, contact info)
-               against what index.html currently says.
-            2. If they differ, update index.html's text to accurately reflect the
-               CV, preserving the existing HTML structure, classes, and styling
-               conventions. Only touch the sections that actually need to change.
-            3. If an image file changed, just sanity-check that nearby alt text or
+            1. Read assets/Durval_Polonia_CV.pdf in full.
+            2. Read index.html in full.
+            3. Go section by section (About/Quick facts, each Experience entry,
+               Education, Publications, Projects, and every Skills sub-list —
+               Programming Languages, Technologies, AWS Services, Areas of
+               Knowledge, Languages, or whatever sub-lists the CV currently has).
+               For each one, explicitly work out the diff in BOTH directions:
+                 - items/details present in the CV but missing or worded
+                   differently in index.html → add or correct them.
+                 - items/details currently in index.html but no longer present
+                   in the CV → remove them, even if you don't know why they were
+                   dropped. Do not leave stale content just because it's
+                   plausible or was true before.
+                 - If the CV drops an entire sub-list/subsection that
+                   index.html has (e.g. a whole "AWS Services" block), remove
+                   that block from index.html entirely, not just its items.
+            4. Apply the edits, preserving the existing HTML structure, classes,
+               and styling conventions. Only touch the sections that actually
+               need to change.
+            5. If an image file changed, just sanity-check that nearby alt text or
                captions still make sense — don't rewrite unrelated content.
-            4. Never add, delete, or rename any file in assets/ — every filename is
+            6. Never add, delete, or rename any file in assets/ — every filename is
                hardcoded elsewhere in the site.
-            5. If nothing actually needs to change, commit nothing and make no
+            7. If nothing actually needs to change, commit nothing and make no
                git commands at all.
-            6. If you do make changes, stage and commit them yourself with git
+            8. If you do make changes, stage and commit them yourself with git
                (a clear, descriptive commit message) — do not push; the
                workflow handles pushing.
           claude_args: |
