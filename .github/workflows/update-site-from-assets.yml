@@ -1,46 +1,22 @@
 name: Update site from assets
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "assets/**"
+  workflow_run:
+    workflows: ["Validate assets"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  validate-assets:
+  update-website:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Ensure no assets were added, deleted, or renamed
-        run: |
-          BEFORE="${{ github.event.before }}"
-          ZERO="0000000000000000000000000000000000000000"
-
-          if [ -z "$BEFORE" ] || [ "$BEFORE" = "$ZERO" ]; then
-            echo "No previous commit to diff against (e.g. new branch or manual run) — skipping check."
-            exit 0
-          fi
-
-          CHANGES="$(git diff --name-status "$BEFORE" "${{ github.sha }}" -- assets/)"
-          echo "$CHANGES"
-
-          if echo "$CHANGES" | grep -qE '^(A|D|R)'; then
-            echo "::error::Detected an added, deleted, or renamed file under assets/. Only modifying existing files (same filename) is allowed, since filenames are hardcoded throughout index.html/styles.css."
-            exit 1
-          fi
-
-  update-website:
-    needs: validate-assets
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - uses: anthropics/claude-code-action@v1
         with:
