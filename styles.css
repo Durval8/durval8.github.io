@@ -515,19 +515,17 @@ h1, h2, h3 {
   gap: 1.4rem;
 }
 
-.projects-list .entry-note a {
-  color: var(--accent);
-  font-weight: 500;
-}
-
 .project-links {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.7rem;
+  margin-top: 0.9rem;
 }
 
-.projects-list .entry-note a.live-link {
+.project-links a.live-link {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -538,7 +536,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.projects-list .entry-note a.live-link:hover {
+.project-links a.live-link:hover {
   opacity: 0.85;
   text-decoration: none;
 }
@@ -558,8 +556,8 @@ h1, h2, h3 {
   100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
 
-.projects-list .entry-note a.repo-link {
-  color: var(--text-muted);
+.project-links a.repo-link {
+  color: var(--accent);
   font-weight: 500;
 }
 
