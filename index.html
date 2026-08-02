@@ -251,24 +251,28 @@
       <h2 class="section-title reveal"><span class="section-index">05.</span> Projects</h2>
       <div class="projects-list">
         <article class="reveal">
-          <div class="card">
-            <header class="entry-header">
-              <h3>Personal Finance Platform <span class="entry-org">· Spring Boot microservices</span></h3>
-              <p class="entry-meta">2026</p>
-            </header>
-            <ul class="entry-points">
-              <li>Built a Spring Boot 3 / Java 21 + PostgreSQL core service for transactions, budgets, and net-worth analytics, alongside a separately deployed MongoDB-backed investments service owning its own data.</li>
-              <li>Decoupled the services over RabbitMQ with an outbox pattern, behind an nginx gateway presenting one origin to a React 18 + TypeScript frontend, covered by unit, web-slice, and Testcontainers tests.</li>
-              <li>Built through an agentic-AI workflow centered on context management: a nine-document versioned specification set (system design, data model, API, testing) maintained as durable context for coding agents, keeping generated code aligned with the intended architecture across sessions.</li>
-            </ul>
-            <p class="entry-note">
-              <a href="https://big4finance.online" target="_blank" rel="noopener">big4finance.online</a>
-              &nbsp;·&nbsp;
-              <a href="https://github.com/Durval8/big4" target="_blank" rel="noopener">github.com/Durval8/big4</a>
-            </p>
-            <ul class="tag-list">
-              <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>MongoDB</li><li>RabbitMQ</li><li>React</li><li>TypeScript</li><li>nginx</li><li>Agentic AI</li>
-            </ul>
+          <div class="timeline-frame">
+            <img class="timeline-image" src="assets/big4.png" alt="Big4 Finance project preview" />
+            <div class="timeline-content card">
+              <header class="entry-header">
+                <h3>Big4 Finance <span class="entry-org">· Personal Finance Dashboard</span></h3>
+                <p class="entry-meta">2026</p>
+              </header>
+              <ul class="entry-points">
+                <li>Built a Spring Boot 3 / Java 21 + PostgreSQL core service for transactions, budgets, and net-worth analytics, alongside a separately deployed MongoDB-backed investments service owning its own data.</li>
+                <li>Decoupled the services over RabbitMQ with an outbox pattern, behind an nginx gateway presenting one origin to a React 18 + TypeScript frontend, covered by unit, web-slice, and Testcontainers tests.</li>
+                <li>Built through an agentic-AI workflow centered on context management: a nine-document versioned specification set (system design, data model, API, testing) maintained as durable context for coding agents, keeping generated code aligned with the intended architecture across sessions.</li>
+              </ul>
+              <p class="entry-note project-links">
+                <a class="live-link" href="https://big4finance.online" target="_blank" rel="noopener">
+                  <span class="live-dot" aria-hidden="true"></span>big4finance.online
+                </a>
+                <a class="repo-link" href="https://github.com/Durval8/big4" target="_blank" rel="noopener">github.com/Durval8/big4</a>
+              </p>
+              <ul class="tag-list">
+                <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>MongoDB</li><li>RabbitMQ</li><li>React</li><li>TypeScript</li><li>nginx</li><li>Agentic AI</li>
+              </ul>
+            </div>
           </div>
         </article>
 
@@ -278,7 +282,7 @@
             <div class="timeline-content card">
               <header class="entry-header">
                 <h3>Nvideo <span class="entry-org">· Your local movie database</span></h3>
-                <p class="entry-meta">2026 &nbsp;·&nbsp; In Progress</p>
+                <p class="entry-meta">2026</p>
               </header>
               <ul class="entry-points">
                 <li>Built a containerized full-stack movie-catalogue app with a Django REST + PostgreSQL backend, automated ingestion from the TMDB API, and an nginx reverse proxy.</li>
