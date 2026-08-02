@@ -137,13 +137,14 @@
               <p class="entry-meta">Lisbon &nbsp;·&nbsp; Feb 2026 – Present</p>
             </header>
             <ul class="entry-points">
-              <li>Maintaining and expanding the API bridging BMW's internal product data with sellers' user-facing applications for all markets.</li>
-              <li>Improving CI/CD pipelines and developing backend services in Java using the Quarkus framework, with test coverage built on JUnit, Cucumber, and Testcontainers.</li>
-              <li>Redesigning and automating application infrastructure across multiple AWS services using CloudFormation.</li>
-              <li>Using state-of-the-art agentic AI to boost productivity and explore novel agentic-based development workflows.</li>
+              <li>Maintaining and extending the integration API bridging BMW's internal product data with seller-facing applications across 200+ markets, serving roughly 40M requests per day.</li>
+              <li>Developing backend services in Java on Quarkus, covered by a layered test suite of JUnit, Cucumber BDD, and Testcontainers integration tests against real dependencies.</li>
+              <li>Redesigned and automated application infrastructure across multiple AWS services as declarative CloudFormation templates, replacing legacy import pipelines.</li>
+              <li>Extending the GitHub Actions CI/CD pipelines.</li>
+              <li>Introducing agentic AI into day-to-day delivery and prototyping novel agent-assisted development workflows now used by the team.</li>
             </ul>
             <ul class="tag-list">
-              <li>AWS</li><li>CloudFormation</li><li>CI/CD</li><li>Java</li><li>Quarkus</li><li>Agentic AI</li>
+              <li>AWS</li><li>CloudFormation</li><li>CI/CD</li><li>GitHub Actions</li><li>Java</li><li>Quarkus</li><li>Agentic AI</li>
             </ul>
           </div>
         </article>
@@ -158,12 +159,12 @@
                 <p class="entry-meta">Aveiro &nbsp;·&nbsp; Apr 2025 – Jan 2026</p>
               </header>
               <ul class="entry-points">
-                <li>Developed a complete end-to-end pipeline to train syscall-based anomaly detection ML models for serverless environments.</li>
-                <li>Built an eBPF-based system call interception system to support data acquisition on low-level function behavior.</li>
-                <li>Created a dataset of function behavior supported by an in-depth analysis of the vulnerabilities associated with cloud environments.</li>
+                <li>Developed a complete end-to-end pipeline — capture, labelling, feature extraction, training, evaluation — to train syscall-based anomaly detection ML models for serverless environments, reaching 0.97 MCC at sub-millisecond average inference.</li>
+                <li>Built an eBPF-based system call interception layer tracing function behavior in the Linux kernel at runtime, backed by a labelled dataset built on an in-depth analysis of cloud- and serverless-specific vulnerabilities.</li>
+                <li>Authored the resulting detection system, FADO, published at IEEE NOMS 2026.</li>
               </ul>
               <ul class="tag-list">
-                <li>eBPF</li><li>Machine Learning</li><li>Serverless</li><li>Python</li><li>Docker</li><li>Security</li>
+                <li>eBPF</li><li>Machine Learning</li><li>Serverless</li><li>Python</li><li>Security</li>
               </ul>
             </div>
           </div>
@@ -179,12 +180,12 @@
                 <p class="entry-meta">Aveiro &nbsp;·&nbsp; Jul 2024 – Aug 2024</p>
               </header>
               <ul class="entry-points">
-                <li>Boosted inter-team cooperation by automating technical tasks for product team needs.</li>
-                <li>Developed Kotlin code for Peacock’s large-scale environment with thousands of active daily users.</li>
-                <li>Designed and documented the complete project lifecycle following SCRUM methodology.</li>
+                <li>Developed Kotlin backend code for Peacock, Sky’s streaming platform, serving tens of thousands of daily active users.</li>
+                <li>Boosted inter-team cooperation by automating the creation of pull requests for product data changes.</li>
+                <li>Documented the full project lifecycle under Scrum.</li>
               </ul>
               <ul class="tag-list">
-                <li>Backend</li><li>Kotlin</li><li>SCRUM</li>
+                <li>Backend</li><li>Kotlin</li><li>Scrum</li>
               </ul>
             </div>
           </div>
@@ -200,14 +201,12 @@
                 <p class="entry-meta">Porto &nbsp;·&nbsp; Jul 2023 – Aug 2023</p>
               </header>
               <ul class="entry-points">
-                <li>Used AWS to integrate a new data analysis module within the existing cloud infrastructure.</li>
-                <li>Explored different containerization approaches for module deployment.</li>
-                <li>Created data-centric views into the value provided by the test automation team.</li>
-                <li>Used Kanban as the development methodology.</li>
-                <li>Co-presented the scope of the internship to hundreds in adidas’s Porto community.</li>
+                <li>Used AWS to integrate a new data-analysis module into adidas’s existing cloud infrastructure.</li>
+                <li>Created data-centric views quantifying the test automation team’s delivered value for other internal teams.</li>
+                <li>Co-presented the internship to several hundred in adidas’s Porto tech community.</li>
               </ul>
               <ul class="tag-list">
-                <li>AWS</li><li>Rancher</li><li>Docker</li>
+                <li>AWS</li>
               </ul>
             </div>
           </div>
@@ -225,7 +224,7 @@
           <p class="entry-note"><strong>Thesis:</strong> Leveraging system call information to provide function-specific protection in serverless environments.</p>
         </article>
         <article class="card reveal">
-          <h3>Erasmus Exchange</h3>
+          <h3>Erasmus+ Exchange Semester</h3>
           <p class="entry-meta">University of Padova &nbsp;·&nbsp; Feb 2024 – Jul 2024</p>
           <p class="entry-note">International exchange semester.</p>
         </article>
@@ -252,6 +251,28 @@
       <h2 class="section-title reveal"><span class="section-index">05.</span> Projects</h2>
       <div class="projects-list">
         <article class="reveal">
+          <div class="card">
+            <header class="entry-header">
+              <h3>Personal Finance Platform <span class="entry-org">· Spring Boot microservices</span></h3>
+              <p class="entry-meta">2026</p>
+            </header>
+            <ul class="entry-points">
+              <li>Built a Spring Boot 3 / Java 21 + PostgreSQL core service for transactions, budgets, and net-worth analytics, alongside a separately deployed MongoDB-backed investments service owning its own data.</li>
+              <li>Decoupled the services over RabbitMQ with an outbox pattern, behind an nginx gateway presenting one origin to a React 18 + TypeScript frontend, covered by unit, web-slice, and Testcontainers tests.</li>
+              <li>Built through an agentic-AI workflow centered on context management: a nine-document versioned specification set (system design, data model, API, testing) maintained as durable context for coding agents, keeping generated code aligned with the intended architecture across sessions.</li>
+            </ul>
+            <p class="entry-note">
+              <a href="https://big4finance.online" target="_blank" rel="noopener">big4finance.online</a>
+              &nbsp;·&nbsp;
+              <a href="https://github.com/Durval8/big4" target="_blank" rel="noopener">github.com/Durval8/big4</a>
+            </p>
+            <ul class="tag-list">
+              <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>MongoDB</li><li>RabbitMQ</li><li>React</li><li>TypeScript</li><li>nginx</li><li>Agentic AI</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="reveal">
           <div class="timeline-frame">
             <img class="timeline-image" src="assets/proj1.png" alt="Nvideo project preview" />
             <div class="timeline-content card">
@@ -260,9 +281,8 @@
                 <p class="entry-meta">2026 &nbsp;·&nbsp; In Progress</p>
               </header>
               <ul class="entry-points">
-                <li>Built a containerized full-stack movie-catalogue app with a Django REST + PostgreSQL backend, and automated ingestion from the TMDB API.</li>
-                <li>Architected an event-driven reporting subsystem: a standalone Flask + MongoDB microservice kept in sync from PostgreSQL asynchronously through Celery tasks over RabbitMQ.</li>
-                <li>Built and orchestrated a modular Docker Compose stack, complemented by fast, mock-based Python test suites for reliable testing.</li>
+                <li>Built a containerized full-stack movie-catalogue app with a Django REST + PostgreSQL backend, automated ingestion from the TMDB API, and an nginx reverse proxy.</li>
+                <li>Architected an event-driven reporting subsystem: a standalone Flask + MongoDB read model kept in sync asynchronously through Celery tasks over RabbitMQ, isolating analytical load from the transactional path.</li>
               </ul>
               <p class="entry-note">
                 <a href="https://github.com/Durval8/nvideo" target="_blank" rel="noopener">github.com/Durval8/nvideo</a>
@@ -281,25 +301,31 @@
       <h2 class="section-title reveal"><span class="section-index">06.</span> Technologies &amp; Skills</h2>
       <div class="skills-grid">
         <div class="card reveal">
-          <h3>Programming Languages</h3>
-          <ul class="tag-list">
-            <li>Python</li><li>Java</li><li>C++</li><li>Kotlin</li><li>SQL</li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <h3>Technologies</h3>
-          <ul class="tag-list">
-            <li>Docker</li><li>Git</li><li>Linux</li><li>Spring Boot</li><li>Quarkus</li><li>Kafka</li><li>CloudFormation</li><li>MongoDB</li><li>PostgreSQL</li><li>Celery</li><li>RabbitMQ</li><li>Django</li>
-          </ul>
-        </div>
-        <div class="card reveal">
-          <h3>Areas of Knowledge</h3>
-          <ul class="tag-list">
-            <li>Agentic AI</li><li>Cloud Computing</li><li>DevOps</li><li>OOP</li><li>Algorithms &amp; Data Structures</li><li>Databases</li><li>Agile</li><li>Machine Learning</li><li>Telecommunications &amp; Networking</li>
-          </ul>
-        </div>
-        <div class="card reveal">
           <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>Java</li><li>Python</li><li>Kotlin</li><li>C++</li><li>SQL</li><li>Bash</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Backend &amp; Testing</h3>
+          <ul class="tag-list">
+            <li>Quarkus</li><li>Spring Boot</li><li>Django / DRF</li><li>Flask</li><li>Celery</li><li>REST API Design</li><li>JUnit</li><li>Cucumber (BDD)</li><li>Testcontainers</li><li>pytest</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Cloud, Data &amp; DevOps</h3>
+          <ul class="tag-list">
+            <li>AWS</li><li>Infrastructure as Code</li><li>CloudFormation</li><li>Docker Compose</li><li>CI/CD</li><li>Git</li><li>GitHub Actions</li><li>Linux</li><li>nginx</li><li>PostgreSQL</li><li>MongoDB</li><li>Elasticsearch</li><li>Kafka</li><li>RabbitMQ</li><li>Event-Driven Architecture</li><li>Agile (Scrum, Kanban)</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Agentic AI &amp; ML</h3>
+          <ul class="tag-list">
+            <li>Claude Code</li><li>MCP</li><li>Agent Skill Authoring</li><li>Subagent Design</li><li>Context Management</li><li>Agent Memory</li><li>Applied ML for Anomaly Detection</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Languages Spoken</h3>
           <ul class="tag-list">
             <li>Portuguese · Native</li><li>English · Fluent</li><li>Spanish · Fluent</li>
           </ul>
